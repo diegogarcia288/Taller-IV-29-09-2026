@@ -11,7 +11,7 @@ package paquete;
 public class Envios {
     public static void main(String[] args) {
             
-            Paquete p1 = new Paquete("P-001", "Manizales", 3.0, true);
+            Paquete p1 = new Paquete("P-001", "Manizales", 6.0, true);
             p1.mostrarInformacion();
             
             Paquete p2 = new Paquete("P-002", "Pereira");
@@ -29,5 +29,9 @@ public class Envios {
             
             System.out.println(p1.calcularCosto (4000));
             System.out.println(p2.calcularCosto (4000));
+            
+            if(p1.esPesado()){
+                System.out.println("El paquete requiere un manejo especial pues supera los 5kg");
+            }
     } 
 }

@@ -33,6 +33,11 @@ public class Paquete {
         System.out.println(codigo + " -> " + destino + " | " + peso + " Kg " + " |  asegurado: " + asegurado);
     }
     
+    public void mostrarInformacion(String encabezado){
+        System.out.println(encabezado);
+        mostrarInformacion();
+    }
+    
     public void actualizarPeso(double peso){
         this.peso = peso;
     }
@@ -51,6 +56,10 @@ public class Paquete {
             costo = costo + 8000;
         }
         return costo;
+    }
+    
+    public boolean esPesado(){
+        return peso > 5.0;
     }
     
 }
